@@ -1,0 +1,51 @@
+body {
+  background-color: black;
+  background-size: cover;
+  padding: 50px;
+}
+
+img {
+  -webkit-box-shadow: 0 0 200px 0 #000000;
+  box-shadow: 0 0 200px 0 #000000;
+  transition: transform .1s;
+}
+
+img:hover {
+  /* Chrome, Safari, Opera */
+  -webkit-animation-name: hue;
+  -webkit-animation-duration: .2s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+  /* Standard syntax */
+  animation-name: hue;
+  animation-duration: .2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes hue {
+  0% {
+    transform: scale(1);
+    -webkit-filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+    transform: scale(1.5);
+  }
+}
+/* Standard syntax */
+@keyframes hue {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+    transform: scale(1.5);
+  }
+}
